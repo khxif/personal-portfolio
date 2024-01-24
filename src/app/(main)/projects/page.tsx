@@ -35,7 +35,7 @@ export default function ProjectPage() {
                 alt="logo"
                 width={200}
                 height={200}
-                className="w-full h-40"
+                className="w-full h-40 aspect-square"
               />
             </div>
 

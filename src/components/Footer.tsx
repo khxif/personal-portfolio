@@ -21,7 +21,7 @@ export default function Footer() {
 
       <div className="flex items-center space-x-6">
         {socials?.map((social) => (
-          <a href={social.url} key={social.id}>
+          <a href={social.url} target="_blank" key={social.id}>
             <social.icon className="w-5 h-5" />
           </a>
         ))}

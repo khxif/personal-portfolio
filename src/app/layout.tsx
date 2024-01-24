@@ -19,6 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
+      <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       <body className={cn(inter.className, "bg-[#191328] text-white")}>
         <Header />
         {children}
