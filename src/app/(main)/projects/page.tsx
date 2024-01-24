@@ -2,7 +2,6 @@ import { projects } from "@/lib/constants";
 import { cn } from "@/lib/utils";
 import { Raleway } from "next/font/google";
 import Image from "next/image";
-import Link from "next/link";
 import { FaGithub } from "react-icons/fa6";
 import { LiaLinkSolid } from "react-icons/lia";
 
@@ -31,11 +30,11 @@ export default function ProjectPage() {
           >
             <div className="w-full px-14">
               <Image
-                src="/pic.png"
+                src={project?.image}
                 alt="logo"
                 width={200}
                 height={200}
-                className="w-full h-40 aspect-square"
+                className="w-full h-40 aspect-video md:aspect-square"
               />
             </div>
 
@@ -43,12 +42,12 @@ export default function ProjectPage() {
               <h1 className={cn("text-2xl", raleway.className)}>
                 {project?.name}
               </h1>
-              <p className={cn(raleway.className, "italic")}>
+              <p className={cn(raleway.className, "italic text-center")}>
                 {project?.description}
               </p>
 
               <span className="flex items-center justify-center space-x-6">
-                <Link href={project?.github}>
+                <a target="_blank" href={project?.github}>
                   <button
                     className="flex items-center space-x-2 bg-second py-2 px-4
                  hover:opacity-85 rounded-sm"
@@ -56,9 +55,9 @@ export default function ProjectPage() {
                     <FaGithub />
                     <p>Github</p>
                   </button>
-                </Link>
+                </a>
 
-                <Link href={project.live}>
+                <a target="_blank" href={project.live}>
                   <button
                     className="flex items-center space-x-2 bg-second py-2 px-4
                  hover:opacity-85 rounded-sm"
@@ -66,7 +65,7 @@ export default function ProjectPage() {
                     <LiaLinkSolid />
                     <p>Live</p>
                   </button>
-                </Link>
+                </a>
               </span>
             </div>
           </div>

@@ -57,7 +57,7 @@ export default function AboutPage() {
 
           <div className="flex flex-col space-y-4 items-center">
             <h2 className="font-medium text-xl">Download my resume.</h2>
-            <button className="px-10 py-3 bg-transparent border border-main">
+            <button className="px-20 py-3 bg-transparent border border-main animate-btn">
               Download
             </button>
           </div>

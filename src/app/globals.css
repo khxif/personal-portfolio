@@ -30,6 +30,29 @@
   transition: 0.3s width ease-in-out;
 }
 
+.animate-btn {
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+}
+
+.animate-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  transform: translateX(-100%);
+  background-color: #cd5ef7;
+  transition: transform .25s linear;
+  z-index: -1;
+}
+
+.animate-btn:hover::before {
+  transform: translateX(0);
+}
+
 @layer components {
   .half-underline {
     @apply after:w-1/2 relative after:h-1 after:bg-[#ce5ff8] after:absolute after:bottom-0 max-w-fit -z-50;
