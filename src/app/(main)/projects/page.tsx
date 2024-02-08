@@ -1,9 +1,14 @@
 import { projects } from "@/lib/constants";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
 import { Raleway } from "next/font/google";
 import Image from "next/image";
 import { FaGithub } from "react-icons/fa6";
 import { LiaLinkSolid } from "react-icons/lia";
+
+export const metadata: Metadata = {
+  title: "Projects",
+};
 
 const raleway = Raleway({
   weight: ["300", "400", "500", "600", "700", "800"],

@@ -1,6 +1,11 @@
 import TechStacks from "@/components/TechStacks";
 import TiltDiv from "@/motion/TiltDiv";
+import { Metadata } from "next";
 import Image from "next/image";
+
+export const metadata: Metadata = {
+  title: "About",
+};
 
 export default function AboutPage() {
   return (

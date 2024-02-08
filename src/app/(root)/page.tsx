@@ -1,8 +1,13 @@
 import HomeSection from "@/sections/HomeSection";
+import { Metadata } from "next";
 import dynamic from "next/dynamic";
 import Link from "next/link";
 
 const TypeWriterEffect = dynamic(() => import("@/components/TypeWriterEffect"));
+
+export const metadata: Metadata = {
+  title: "Home",
+};
 
 export default function HomePage() {
   return (

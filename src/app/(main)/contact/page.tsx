@@ -1,8 +1,11 @@
-"use client";
-
 import ContactForm from "@/components/ContactForm";
 import { cn } from "@/lib/utils";
+import { Metadata } from "next";
 import { Roboto_Mono } from "next/font/google";
+
+export const metadata: Metadata = {
+  title: "Contact",
+};
 
 const roboto_mono = Roboto_Mono({
   weight: ["400"],

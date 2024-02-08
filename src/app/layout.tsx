@@ -8,7 +8,10 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Khaif",
+  title: {
+    default: "Khaif",
+    template: "Khaif - %s",
+  },
   description: "My personal Website",
 };
 
