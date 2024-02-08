@@ -1,5 +1,5 @@
+import HomeSection from "@/sections/HomeSection";
 import dynamic from "next/dynamic";
-import Image from "next/image";
 import Link from "next/link";
 
 const TypeWriterEffect = dynamic(() => import("@/components/TypeWriterEffect"));
@@ -33,9 +33,7 @@ export default function HomePage() {
         </Link>
       </section>
 
-      <section className="flex items-center h-full justify-center mt-auto md:w-1/2 py-4">
-        <Image src="/home-main.svg" alt="home" width={500} height={400} />
-      </section>
+      <HomeSection />
     </main>
   );
 }
