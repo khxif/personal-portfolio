@@ -1,4 +1,4 @@
-import Header from "@/components/Header";
+import Header from "@/components/Header/Header";
 import { cn } from "@/lib/utils";
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
@@ -23,7 +23,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
-      <body className={cn(inter.className, "bg-[#191328] text-white")}>
+      <body className={cn(inter.className, "bg-[#191328] text-white overflow-x-hidden")}>
         <Header />
         {children}
         <Toaster richColors position="top-left" />

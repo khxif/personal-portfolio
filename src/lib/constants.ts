@@ -22,25 +22,25 @@ import { TbBrandTypescript } from "react-icons/tb";
 
 export const navLinks = [
   {
-    id: 1,
+    id: .1,
     label: "Home",
     href: "/",
     icon: Home,
   },
   {
-    id: 2,
+    id: 0.2,
     label: "About",
     href: "/about",
     icon: User,
   },
   {
-    id: 3,
+    id: 0.3,
     label: "Projects",
     href: "/projects",
     icon: Presentation,
   },
   {
-    id: 4,
+    id: 0.4,
     label: "Contact Me",
     href: "/contact",
     icon: Contact,
