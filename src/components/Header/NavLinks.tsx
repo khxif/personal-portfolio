@@ -1,4 +1,4 @@
-"use client"
+"use client";
 
 import { navLinks } from "@/lib/constants";
 import { cn } from "@/lib/utils";
@@ -15,7 +15,7 @@ export default function NavLinks() {
           <motion.h1
             initial={{ x: "100%", opacity: 0 }}
             animate={{ x: 0, opacity: 1 }}
-            transition={{ duration: 0.5, delay: link.id }}
+            transition={{ duration: 0.5, delay: link.id, ease: "linear" }}
             className={cn(pathname === link.href && "active", "link pb-2")}
           >
             <link.icon />
