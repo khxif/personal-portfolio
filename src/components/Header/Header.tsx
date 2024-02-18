@@ -12,6 +12,7 @@ import NavLinks from "./NavLinks";
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
   const ref = useRef(null);
   const pathname = usePathname();
@@ -20,14 +21,42 @@ export default function Header() {
   useEffect(() => {
     setIsOpen(false);
   }, [pathname]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const offset = window.scrollY;
+      const scrollThreshold = 100;
+
+      if (offset > scrollThreshold) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <header
       ref={ref}
-      className="flex flex-col px-4 md:px-20 text-white sticky top-0  items-end py-8 bg-[#191528] z-50 mb-4"
+      className={cn(
+        isOpen ? "bg-[#191528]" : "bg-transparent",
+        scrolled && "bg-[#191528]",
+        "flex flex-col px-4 md:px-20 text-white sticky top-0  items-end py-8 z-50 mb-4"
+      )}
     >
       <NavLinks />
 
-      <div className="md:hidden w-full absolute z-50 bg-[#191528]">
+      <div
+        className={cn(
+          isOpen ? "bg-[#191528]" : "bg-transparent",
+          "md:hidden w-full absolute z-50"
+        )}
+      >
         <span className="flex justify-end text-[#cd5ef7] ">
           <Hamburger toggled={isOpen} toggle={setIsOpen} />
         </span>
