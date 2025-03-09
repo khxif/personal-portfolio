@@ -10,7 +10,7 @@ export default function TypeWriterEffect() {
           "I'm a Web developer",
           "Frontend developer",
           "Full Stack developer",
-          "Open source contributor",
+          "Freelancer",
         ],
         autoStart: true,
         loop: true,
