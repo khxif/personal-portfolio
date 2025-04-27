@@ -1,9 +1,8 @@
-import React from "react";
-import { SparklesCore } from "./ui/sparkles";
+import { SparklesCore } from './ui/sparkles';
 
-export default function SparkleBackGround() {
+export function SparkleBackGround() {
   return (
-    <div className="fixed h-full -z-50  top-0 w-screen">
+    <div className="fixed h-full -z-50 top-0 w-screen">
       <SparklesCore
         id="tsparticlesfullpage"
         background="transparent"

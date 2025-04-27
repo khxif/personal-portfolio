@@ -1,5 +1,5 @@
 import Header from '@/components/Header/Header';
-import SparkleBackGround from '@/components/SparkleBackGround';
+import { SparkleBackGround } from '@/components/SparkleBackGround';
 import { cn } from '@/lib/utils';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';

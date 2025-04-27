@@ -1,10 +1,10 @@
-import TechStacks from "@/components/TechStacks";
-import TiltDiv from "@/motion/TiltDiv";
-import { Metadata } from "next";
-import Image from "next/image";
+import { icons } from '@/lib/constants';
+import TiltDiv from '@/motion/TiltDiv';
+import { Metadata } from 'next';
+import Image from 'next/image';
 
 export const metadata: Metadata = {
-  title: "About",
+  title: 'About',
 };
 
 export default function AboutPage() {
@@ -22,26 +22,22 @@ export default function AboutPage() {
 
           <div className="flex flex-col space-y-6 items-center text-lg leading-10">
             <p className="">
-              Hey, I&apos;m{" "}
-              <span className="text-main italic text-lg">Khaif Mohamed</span>{" "}
-              from <span className="text-main italic">Varkala,Kerala.</span> I
-              am currently pursuing Btech CSE(2022-26). Also I develop Projects
-              and contribute to Open Source.
+              Hey, I&apos;m <span className="text-main italic text-lg">Khaif Mohamed</span> from{' '}
+              <span className="text-main italic">Varkala,Kerala.</span> I am currently pursuing
+              Btech CSE(2022-26). Also I develop Projects and contribute to Open Source.
             </p>
             <p>
-              I am fluent in{" "}
-              <span className="text-main italic">Javascript</span> and
-              <span className="text-main italic">javascript libraries.</span> I
-              have a keen interest on frontend JS libraries and frameworks like
+              I am fluent in <span className="text-main italic">Javascript</span> and
+              <span className="text-main italic">javascript libraries.</span> I have a keen interest
+              on frontend JS libraries and frameworks like
               <span className="text-main italic">React.js and Next.js.</span>
             </p>
 
             <p>
-              Whenever possible I try to improve my{" "}
-              <span className="text-main italic">JS skills</span> and apply it
-              on building{" "}
+              Whenever possible I try to improve my{' '}
+              <span className="text-main italic">JS skills</span> and apply it on building{' '}
               <span className="text-main italic">full stack products.</span>
-              Also I am passionate about building{" "}
+              Also I am passionate about building{' '}
               <span className="text-main italic">real world products</span>
             </p>
           </div>
@@ -75,7 +71,22 @@ export default function AboutPage() {
           <span className="font-medium text-main">sets</span>
         </h1>
 
-        <TechStacks />
+        <section
+          className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-5 w-full mx-auto items-center px-4
+       justify-center gap-y-6 md:gap-y-10 gap-x-5 md:gap-x-12 py-10 place-content-center text-center"
+        >
+          {icons?.map(icon => (
+            <TiltDiv key={icon.id}>
+              <div
+                className="px-6 md:px-4 py-8 md:py-10 border border-[#ce5ff8]/50 items-center 
+        justify-center flex shadow-md shadow-main hover:shadow-xl hover:shadow-main
+        transition-all duration-200 ease-linear"
+              >
+                <icon.icon className="w-16 h-16" />
+              </div>
+            </TiltDiv>
+          ))}
+        </section>
       </section>
     </main>
   );
