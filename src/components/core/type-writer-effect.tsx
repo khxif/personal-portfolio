@@ -6,7 +6,7 @@ export function TypeWriterEffect() {
   return (
     <Typewriter
       options={{
-        strings: ["I'm a Web developer", 'Full Stack developer', 'Freelancer'],
+        strings: ["I'm a Web Developer", 'FullStack Developer', 'Freelancer'],
         autoStart: true,
         loop: true,
       }}
