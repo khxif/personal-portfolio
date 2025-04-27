@@ -21,6 +21,12 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
     <html lang="en">
+      <head>
+        <meta
+          name="google-site-verification"
+          content="zfn0M131brC-O3p9c_FCF0N11JfedBl1Ga8slaZcqX0"
+        />
+      </head>
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       <body className={cn(inter.className, 'bg-[#191328] text-white overflow-x-hidden')}>
         <Navbar />
