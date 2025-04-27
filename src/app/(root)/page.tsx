@@ -27,9 +27,9 @@ export default function HomePage() {
           </button>
         </Link>
       </section>
-
+      
       <Zoom
-        duration={300}
+        duration={600}
         className="flex items-center h-full justify-center mt-auto md:w-1/2 py-4"
       >
         <Image src="/home-main.svg" alt="home" width={500} height={400} />
