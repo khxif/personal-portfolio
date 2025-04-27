@@ -24,7 +24,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <meta
           name="google-site-verification"
-          content="zfn0M131brC-O3p9c_FCF0N11JfedBl1Ga8slaZcqX0"
+          content={process.env.NEXT_PUBLIC_GOOGLE_SITE_VERIFICATION}
         />
       </head>
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
