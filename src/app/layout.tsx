@@ -1,5 +1,5 @@
 import { Sparkles } from '@/components/core/sparkles';
-import { Header } from '@/components/header/header';
+import { Navbar } from '@/components/navbar/navbar';
 import { cn } from '@/lib/utils';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -23,7 +23,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html lang="en">
       <link rel="shortcut icon" href="/favicon.png" type="image/x-icon" />
       <body className={cn(inter.className, 'bg-[#191328] text-white overflow-x-hidden')}>
-        <Header />
+        <Navbar />
         {children}
         <Sparkles />
         <Analytics />

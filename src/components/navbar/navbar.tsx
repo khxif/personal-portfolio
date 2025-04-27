@@ -10,7 +10,7 @@ import { useEffect, useRef, useState } from 'react';
 import { useClickAway } from 'react-use';
 import { NavLinks } from './nav-links';
 
-export function Header() {
+export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
 
