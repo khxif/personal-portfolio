@@ -1,13 +1,7 @@
-import HomeSection from "@/sections/HomeSection";
-import { Metadata } from "next";
-import dynamic from "next/dynamic";
-import Link from "next/link";
-
-const TypeWriterEffect = dynamic(() => import("@/components/TypeWriterEffect"));
-
-export const metadata: Metadata = {
-  title: "Home",
-};
+import TypeWriterEffect from '@/components/TypeWriterEffect';
+import Image from 'next/image';
+import Link from 'next/link';
+import { Zoom } from 'react-awesome-reveal';
 
 export default function HomePage() {
   return (
@@ -19,15 +13,11 @@ export default function HomePage() {
         className="flex flex-col py-10 md:py-0 items-center md:items-start md:pl-10 justify-center md:w-1/2 
       h-full space-y-6"
       >
-        <h1 className="font-medium text-3xl sm:text-4xl md:text-6xl">
-          Khaif Mohamed
-        </h1>
+        <h1 className="font-medium text-3xl sm:text-4xl md:text-6xl">Khaif Mohamed</h1>
         <span className="text-[#c95df2] text-2xl md:text-3xl">
           <TypeWriterEffect />
         </span>
-        <span className="text-base md:text-lg italic">
-          Based on Kerala,India
-        </span>
+        <span className="text-base md:text-lg italic">Based on Kerala,India</span>
         <Link href="/contact">
           <button
             className="bg-[#c95df2] px-8 sm:px-10 py-2.5 sm:py-4 hover:bg-transparent border border-solid
@@ -38,7 +28,12 @@ export default function HomePage() {
         </Link>
       </section>
 
-      <HomeSection />
+      <Zoom
+        duration={300}
+        className="flex items-center h-full justify-center mt-auto md:w-1/2 py-4"
+      >
+        <Image src="/home-main.svg" alt="home" width={500} height={400} />
+      </Zoom>
     </main>
   );
 }

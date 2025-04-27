@@ -8,7 +8,6 @@ export default function TypeWriterEffect() {
       options={{
         strings: [
           "I'm a Web developer",
-          "Frontend developer",
           "Full Stack developer",
           "Freelancer",
         ],
