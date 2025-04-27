@@ -1,43 +1,36 @@
-"use client";
+'use client';
 
-import emailjs from "@emailjs/browser";
-import { zodResolver } from "@hookform/resolvers/zod";
-import { useRef } from "react";
-import { useForm } from "react-hook-form";
-import { toast } from "sonner";
-import * as z from "zod";
-import {
-  Form,
-  FormControl,
-  FormField,
-  FormItem,
-  FormLabel,
-  FormMessage,
-} from "./ui/form";
-import { Input } from "./ui/input";
-import { Textarea } from "./ui/textarea";
+import emailjs from '@emailjs/browser';
+import { zodResolver } from '@hookform/resolvers/zod';
+import { useRef } from 'react';
+import { useForm } from 'react-hook-form';
+import { toast } from 'sonner';
+import * as z from 'zod';
+import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from '../ui/form';
+import { Input } from '../ui/input';
+import { Textarea } from '../ui/textarea';
 
 const formSchema = z.object({
   user_name: z.string().min(2, {
-    message: "Minmum 2 characters should be entered",
+    message: 'Minmum 2 characters should be entered',
   }),
   user_email: z.string().min(5, {
-    message: "Enter a valid email!",
+    message: 'Enter a valid email!',
   }),
   message: z.string().min(2, {
-    message: "Enter a valid message.",
+    message: 'Enter a valid message.',
   }),
 });
 
-export default function ContactForm() {
+export function ContactForm() {
   const formRef = useRef<any>();
 
   const form = useForm<z.infer<typeof formSchema>>({
     resolver: zodResolver(formSchema),
     defaultValues: {
-      user_name: "",
-      user_email: "",
-      message: "",
+      user_name: '',
+      user_email: '',
+      message: '',
     },
   });
 
@@ -47,17 +40,17 @@ export default function ContactForm() {
         process.env.NEXT_PUBLIC_SERVICE_ID!,
         process.env.NEXT_PUBLIC_TEMPLATE_KEY!,
         formRef.current,
-        process.env.NEXT_PUBLIC_PUBLIC_KEY!
+        process.env.NEXT_PUBLIC_PUBLIC_KEY!,
       )
       .then(
-        (result) => {
+        result => {
           console.log(result.text);
-          toast.success("Message sent");
+          toast.success('Message sent');
         },
-        (error) => {
+        error => {
           console.log(error.text);
-          toast.error("Mail not sent.Try again!");
-        }
+          toast.error('Mail not sent.Try again!');
+        },
       );
   };
   return (

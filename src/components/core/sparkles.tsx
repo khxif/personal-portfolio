@@ -1,6 +1,6 @@
-import { SparklesCore } from './ui/sparkles';
+import { SparklesCore } from '../ui/sparkles';
 
-export function SparkleBackGround() {
+export function Sparkles() {
   return (
     <div className="fixed h-full -z-50 top-0 w-screen">
       <SparklesCore

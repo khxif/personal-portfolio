@@ -1,5 +1,5 @@
-import Header from '@/components/Header/Header';
-import { SparkleBackGround } from '@/components/SparkleBackGround';
+import { Sparkles } from '@/components/core/sparkles';
+import { Header } from '@/components/header/header';
 import { cn } from '@/lib/utils';
 import { Analytics } from '@vercel/analytics/react';
 import { SpeedInsights } from '@vercel/speed-insights/next';
@@ -25,10 +25,10 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <body className={cn(inter.className, 'bg-[#191328] text-white overflow-x-hidden')}>
         <Header />
         {children}
-        <SparkleBackGround />
-        <Toaster richColors position="top-left" />
+        <Sparkles />
         <Analytics />
         <SpeedInsights />
+        <Toaster richColors position="bottom-right" />
       </body>
     </html>
   );

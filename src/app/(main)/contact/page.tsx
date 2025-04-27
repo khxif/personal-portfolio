@@ -1,4 +1,4 @@
-import ContactForm from '@/components/ContactForm';
+import { ContactForm } from '@/components/forms/contact-form';
 import { cn } from '@/lib/utils';
 import { Metadata } from 'next';
 import { Roboto_Mono } from 'next/font/google';

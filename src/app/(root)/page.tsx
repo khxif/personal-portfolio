@@ -1,4 +1,4 @@
-import TypeWriterEffect from '@/components/TypeWriterEffect';
+import { TypeWriterEffect } from '@/components/core/type-writer-effect';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Zoom } from 'react-awesome-reveal';
@@ -27,7 +27,7 @@ export default function HomePage() {
           </button>
         </Link>
       </section>
-      
+
       <Zoom
         duration={600}
         className="flex items-center h-full justify-center mt-auto md:w-1/2 py-4"

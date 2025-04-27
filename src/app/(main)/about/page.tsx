@@ -1,5 +1,5 @@
+import { TiltDiv } from '@/components/core/tilt-div';
 import { icons } from '@/lib/constants';
-import TiltDiv from '@/motion/TiltDiv';
 import { Metadata } from 'next';
 import Image from 'next/image';
 
