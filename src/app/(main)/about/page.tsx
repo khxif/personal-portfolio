@@ -51,7 +51,6 @@ export default function AboutPage() {
               width={200}
               height={200}
               priority
-              quality={100}
               className="mb-4"
             />
           </TiltDiv>

@@ -15,7 +15,8 @@ export const metadata: Metadata = {
     default: 'Khaif',
     template: 'Khaif - %s',
   },
-  description: 'My personal Website',
+  description:
+    'I am khaif, a Web Developer. I am passionate about building real world products and improving my skills.',
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {

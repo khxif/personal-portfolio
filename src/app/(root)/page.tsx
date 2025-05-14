@@ -32,7 +32,7 @@ export default function HomePage() {
         duration={600}
         className="flex items-center h-full justify-center mt-auto md:w-1/2 py-4"
       >
-        <Image src="/home-main.svg" alt="home" width={500} height={400} />
+        <Image src="/home-main.svg" alt="home" width={500} height={400} loading="eager" />
       </Zoom>
     </main>
   );
