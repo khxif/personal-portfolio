@@ -17,6 +17,23 @@ export const metadata: Metadata = {
   },
   description:
     'I am khaif, a Web Developer. I am passionate about building real world products and improving my skills.',
+  keywords: [
+    'Web Developer',
+    'Khaif',
+    'Khaif Mohamed',
+    'Khaif Mohd',
+    'Freelance Developer',
+    'Full Stack Developer',
+    'Software Engineer',
+    'Web Development',
+    'Frontend Developer',
+    'Backend Developer',
+    'JavaScript Developer',
+    'React Developer',
+    'Next.js Developer',
+    'Node.js Developer',
+    'Freelance Web Developer',
+  ],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
